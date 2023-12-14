@@ -21,8 +21,11 @@ export default function Home(){
   </div>
   {/* Header End */}
   {/* Hero Start */}
-  <div className="container-fluid bg-primary p-5 bg-hero mb-5">
+ 
+  <div  className="container-fluid bg-primary p-5 bg-hero mb-5">
+    
     <div className="row py-5">
+    <img style={{opacity: 0.33, width: "100em", height:"40em", marginTop:"-5em"}} src="/public/images/ring.jpg" alt="pic1" />
       <div className="col-12 text-center">
         <h1 className="display-2 text-uppercase text-white mb-md-4">G.O.A.T</h1>
         <a href="#" className="btn btn-primary py-md-3 px-md-5 me-3">
@@ -38,12 +41,12 @@ export default function Home(){
   {/* About Start */}
   <div className="container-fluid p-5">
     <div className="row gx-5">
-      <div className="col-lg-5 mb-5 mb-lg-0" style={{ minHeight: 500 }}>
+      <div className="col-lg-5 mb-5 mb-lg-0" style={{ minHeight: 400 }}>
         <div className="position-relative h-100">
           <img
             className="position-absolute w-100 h-100 rounded"
-            src="img/about.jpg"
-            style={{ objectFit: "cover" }}
+            src="/public/images/about.jpg"
+           
           />
         </div>
       </div>
