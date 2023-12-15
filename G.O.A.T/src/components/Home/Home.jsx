@@ -4,18 +4,25 @@ export default function Home(){
 
 
     return (
-        <>
+       
         <>
   {/* Header Start */}
   <div className="container-fluid bg-dark px-0">
     <div className="row gx-0">
+   
       <div className="col-lg-3 bg-dark d-none d-lg-block">
+      
         <a
-          href="index.html"
+          href="/"
           className="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center"
         >
-          <h1 className="m-0 display-4 text-primary text-uppercase">G.O.A.T</h1>
+          <h1 className="m-0 display-4 text-primary text-uppercase" >G.O.A.T</h1>
+          <a href="/"><h2 style={{color:"orange", padding:"1em", marginRight:"-10em",marginTop:"0.7em"}}>List of greatest</h2></a>
+          
         </a>
+        <p style={{display:"flex"}}>
+        <a href="/boxers"><h2  style={{color:"orange", marginLeft:"20em",marginTop:"-3em" }}>Your suggestion</h2></a>
+        </p>
       </div>
     </div>
   </div>
@@ -28,10 +35,10 @@ export default function Home(){
     <img style={{opacity: 0.33, width: "100em", height:"40em", marginTop:"-5em"}} src="/public/images/ring.jpg" alt="pic1" />
       <div className="col-12 text-center">
         <h1 className="display-2 text-uppercase text-white mb-md-4">G.O.A.T</h1>
-        <a href="#" className="btn btn-primary py-md-3 px-md-5 me-3">
+        <a href="/login" className="btn btn-primary py-md-3 px-md-5 me-3">
           Login
         </a>
-        <a href="#" className="btn btn-light py-md-3 px-md-5">
+        <a href="/register" className="btn btn-light py-md-3 px-md-5">
           Register
         </a>
       </div>
@@ -123,8 +130,9 @@ export default function Home(){
     <div className="row g-5 gb-5">
       <div className="col-lg-4 col-md-6">
         <div className="bg-light rounded text-center p-5">
-          <i className="flaticon-six-pack display-1 text-primary" />
-          <h3 className="text-uppercase my-4">Body Building</h3>
+            <img style={{ height:"200px"}}
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Mike_Tyson_Photo_Op_GalaxyCon_Austin_2023.jpg/800px-Mike_Tyson_Photo_Op_GalaxyCon_Austin_2023.jpg" alt="pic" />
+          <h3 className="text-uppercase my-4">Mike Tyson</h3>
           <p>
             Sed amet tempor amet sit kasd sea lorem dolor ipsum elitr dolor amet
             kasd elitr duo vero amet amet stet
@@ -136,8 +144,9 @@ export default function Home(){
       </div>
       <div className="col-lg-4 col-md-6">
         <div className="bg-light rounded text-center p-5">
-          <i className="flaticon-barbell display-1 text-primary" />
-          <h3 className="text-uppercase my-4">Weight Lefting</h3>
+            <img style={{ height:"200px"}}
+            src="https://www.mu-varna.bg/BG/Students/PublishingImages/georgi%20vladimirov.JPG" alt="pic" />
+          <h3 className="text-uppercase my-4">Georgi Vladimirov</h3>
           <p>
             Sed amet tempor amet sit kasd sea lorem dolor ipsum elitr dolor amet
             kasd elitr duo vero amet amet stet
@@ -149,8 +158,9 @@ export default function Home(){
       </div>
       <div className="col-lg-4 col-md-6">
         <div className="bg-light rounded text-center p-5">
-          <i className="flaticon-bodybuilding display-1 text-primary" />
-          <h3 className="text-uppercase my-4">Muscle Building</h3>
+            <img style={{ height:"200px"}}
+            src="https://neilleifer.com/cdn/shop/files/Muhammad_Ali_WIRE000084593-2_720x.jpg?v=1660168454" alt="pic" />
+          <h3 className="text-uppercase my-4">Mohammad Ali</h3>
           <p>
             Sed amet tempor amet sit kasd sea lorem dolor ipsum elitr dolor amet
             kasd elitr duo vero amet amet stet
@@ -184,29 +194,7 @@ export default function Home(){
               <i className="bi bi-telephone text-primary me-2" />
               <p className="mb-0">+012 345 67890</p>
             </div>
-            <div className="d-flex mt-4">
-              <a
-                className="btn btn-primary btn-square rounded-circle me-2"
-                href="#"
-              >
-                <i className="fab fa-twitter" />
-              </a>
-              <a
-                className="btn btn-primary btn-square rounded-circle me-2"
-                href="#"
-              >
-                <i className="fab fa-facebook-f" />
-              </a>
-              <a
-                className="btn btn-primary btn-square rounded-circle me-2"
-                href="#"
-              >
-                <i className="fab fa-linkedin-in" />
-              </a>
-              <a className="btn btn-primary btn-square rounded-circle" href="#">
-                <i className="fab fa-instagram" />
-              </a>
-            </div>
+          
           </div>
           <div className="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
             <h4 className="text-uppercase text-light mb-4">Quick Links</h4>
@@ -225,16 +213,9 @@ export default function Home(){
               </a>
               <a className="text-secondary mb-2" href="#">
                 <i className="bi bi-arrow-right text-primary me-2" />
-                Our Trainers
+                Our Boxers
               </a>
-              <a className="text-secondary mb-2" href="#">
-                <i className="bi bi-arrow-right text-primary me-2" />
-                Latest Blog
-              </a>
-              <a className="text-secondary" href="#">
-                <i className="bi bi-arrow-right text-primary me-2" />
-                Contact Us
-              </a>
+             
             </div>
           </div>
           <div className="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
@@ -254,16 +235,9 @@ export default function Home(){
               </a>
               <a className="text-secondary mb-2" href="#">
                 <i className="bi bi-arrow-right text-primary me-2" />
-                Our Trainers
+                Our Boxers
               </a>
-              <a className="text-secondary mb-2" href="#">
-                <i className="bi bi-arrow-right text-primary me-2" />
-                Latest Blog
-              </a>
-              <a className="text-secondary" href="#">
-                <i className="bi bi-arrow-right text-primary me-2" />
-                Contact Us
-              </a>
+             
             </div>
           </div>
         </div>
@@ -305,6 +279,6 @@ export default function Home(){
   </a>
 </>
 
-        </>
+       
     )
 }
