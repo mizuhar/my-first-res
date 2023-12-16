@@ -41,6 +41,11 @@ export default function Home(){
         <a href="/register" className="btn btn-light py-md-3 px-md-5">
           Register
         </a>
+       
+        <a href="#" style={{marginLeft:"1em"}} className="btn btn-light py-md-3 px-md-5">
+          Logout
+        </a>
+      
       </div>
     </div>
   </div>
