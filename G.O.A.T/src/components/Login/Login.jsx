@@ -72,7 +72,7 @@ export default function Login(){
          {errorMessage && <p style={{color:"red", fontSize: "17px"}}>{errorMessage}</p>}
         <button 
         type="submit"
-        className={styles.opacity}>SUBMIT</button>
+        className={styles.opacity}>LOGIN</button>
       </form>
       <div className={styles.registerforget}>
         <a href="/register">NOT YOU REGISTERED YET?</a>

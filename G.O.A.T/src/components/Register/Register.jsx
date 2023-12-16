@@ -87,7 +87,7 @@ export default function Register(){
         <button 
         type="submit"
         disabled={Object.values(errorMessage).some(x=>x)}
-        className={styles.opacity}>SUBMIT</button>
+        className={styles.opacity}>REGISTER</button>
       </form>
       <div className={styles.registerforget}>
         <a href="/login">HAVE A REGISTRATION</a>

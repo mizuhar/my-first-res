@@ -1,6 +1,10 @@
+import { useContext } from "react"
+import { Link } from "react-router-dom"
+import { TodoContext } from "../contexts/TodoContext"
+
 export default function Home(){
 
-
+const { isAuthenticated, username } = useContext(TodoContext)
 
 
     return (
@@ -17,41 +21,42 @@ export default function Home(){
           className="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center"
         >
           <h1 className="m-0 display-4 text-primary text-uppercase" >G.O.A.T</h1>
-          <a href="/"><h2 style={{color:"orange", padding:"1em", marginRight:"-10em",marginTop:"0.7em"}}>List of greatest</h2></a>
-          
+          <a href="/boxers"><h2 style={{color:"orange", padding:"1em", marginRight:"-10em",marginTop:"0.7em"}}>List of the greatest</h2></a>
+        
         </a>
-        <p style={{display:"flex"}}>
-        <a href="/boxers"><h2  style={{color:"orange", marginLeft:"20em",marginTop:"-3em" }}>Your suggestion</h2></a>
-        </p>
+        {isAuthenticated && (<a href="/boxers/create"><h2  style={{color:"orange", marginLeft:"20em",marginTop:"-3em" }}>Your suggestion</h2></a>
+)}
+        
       </div>
     </div>
   </div>
   {/* Header End */}
   {/* Hero Start */}
  
-  <div  className="container-fluid bg-primary p-5 bg-hero mb-5">
+  <div  className="container-fluid bg-primary p-5 bg-hero mb-5" style={{backgroundImage:"url(/public/images/ring.jpg)"}}>
     
-    <div className="row py-5">
-    <img style={{opacity: 0.33, width: "100em", height:"40em", marginTop:"-5em"}} src="/public/images/ring.jpg" alt="pic1" />
+    <div className="row py-5" >
+    <img style={{opacity: 0.33, width: "100em", height:"20em", marginTop:"-5em"}} src="#" alt="pic1" />
       <div className="col-12 text-center">
         <h1 className="display-2 text-uppercase text-white mb-md-4">G.O.A.T</h1>
-        <a href="/login" className="btn btn-primary py-md-3 px-md-5 me-3">
+        {!isAuthenticated && (<><a href="/login" className="btn btn-primary py-md-3 px-md-5 me-3">
           Login
         </a>
         <a href="/register" className="btn btn-light py-md-3 px-md-5">
           Register
-        </a>
-       
-        <a href="#" style={{marginLeft:"1em"}} className="btn btn-light py-md-3 px-md-5">
+        </a></>)}
+        
+       {isAuthenticated && (<><a href="/logout" style={{marginLeft:"1em"}} className="btn btn-light py-md-3 px-md-5">
           Logout
-        </a>
+        </a><br /><br /><span style={{color:"orange", fontSize:"17px"}}>Current user: {username}</span></>)}
+        
       
       </div>
     </div>
   </div>
   {/* Hero End */}
   {/* About Start */}
-  <div className="container-fluid p-5">
+  <div className="container-fluid p-5" style={{background:"grey"}}>
     <div className="row gx-5">
       <div className="col-lg-5 mb-5 mb-lg-0" style={{ minHeight: 400 }}>
         <div className="position-relative h-100">
@@ -83,9 +88,9 @@ export default function Home(){
               <a
                 className="nav-link text-uppercase text-center w-100 active"
                 data-bs-toggle="pill"
-                href="#pills-1"
+                href="/boxers"
               >
-                About Us
+              List of the greatest
               </a>
             </li>
             <li className="nav-item w-50">
@@ -132,50 +137,7 @@ export default function Home(){
     className="container-fluid programe position-relative px-5 mt-5"
     style={{ marginBottom: 180 }}
   >
-    <div className="row g-5 gb-5">
-      <div className="col-lg-4 col-md-6">
-        <div className="bg-light rounded text-center p-5">
-            <img style={{ height:"200px"}}
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Mike_Tyson_Photo_Op_GalaxyCon_Austin_2023.jpg/800px-Mike_Tyson_Photo_Op_GalaxyCon_Austin_2023.jpg" alt="pic" />
-          <h3 className="text-uppercase my-4">Mike Tyson</h3>
-          <p>
-            Sed amet tempor amet sit kasd sea lorem dolor ipsum elitr dolor amet
-            kasd elitr duo vero amet amet stet
-          </p>
-          <a className="text-uppercase" href="">
-            Read More <i className="bi bi-arrow-right" />
-          </a>
-        </div>
-      </div>
-      <div className="col-lg-4 col-md-6">
-        <div className="bg-light rounded text-center p-5">
-            <img style={{ height:"200px"}}
-            src="https://www.mu-varna.bg/BG/Students/PublishingImages/georgi%20vladimirov.JPG" alt="pic" />
-          <h3 className="text-uppercase my-4">Georgi Vladimirov</h3>
-          <p>
-            Sed amet tempor amet sit kasd sea lorem dolor ipsum elitr dolor amet
-            kasd elitr duo vero amet amet stet
-          </p>
-          <a className="text-uppercase" href="">
-            Read More <i className="bi bi-arrow-right" />
-          </a>
-        </div>
-      </div>
-      <div className="col-lg-4 col-md-6">
-        <div className="bg-light rounded text-center p-5">
-            <img style={{ height:"200px"}}
-            src="https://neilleifer.com/cdn/shop/files/Muhammad_Ali_WIRE000084593-2_720x.jpg?v=1660168454" alt="pic" />
-          <h3 className="text-uppercase my-4">Mohammad Ali</h3>
-          <p>
-            Sed amet tempor amet sit kasd sea lorem dolor ipsum elitr dolor amet
-            kasd elitr duo vero amet amet stet
-          </p>
-          <a className="text-uppercase" href="">
-            Read More <i className="bi bi-arrow-right" />
-          </a>
-        </div>
-      </div>
-    </div>
+    
   </div>
   {/* Programe Start */}
   {/* Facts Start */}
