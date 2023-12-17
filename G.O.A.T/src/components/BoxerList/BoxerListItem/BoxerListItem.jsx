@@ -9,9 +9,9 @@ export default function BoxerListItem({
 
     return(
         < >
-        <div className="col-lg-4 col-md-6"  >
+        <div className="col-lg-4 col-md-6"  style={{width:"25%"}}>
         <div className="bg-light rounded text-center p-5" >
-            <img style={{ height:"200px"}}
+            <img style={{ height:"170px"}}
             src={imageUrl}  alt="pic" />
           <h3 className="text-uppercase my-4">{name}</h3>
           <h5 style={{color:"red"}}>{nickName}</h5>

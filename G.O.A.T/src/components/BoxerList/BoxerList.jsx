@@ -18,10 +18,10 @@ useEffect(()=>{
 
 
     return(
-        <body  style={{backgroundImage:"url('/public/images/public1.jpg')",height:"50em",backgroundSize:"cover"}}>
+        <body  style={{backgroundImage:"url('/public/images/public1.jpg')",height:"90em",backgroundSize:"cover"}}>
             
        
-<section style={{ display:"flex",gap:"1em"}}>
+<section style={{ display:"flex",gap:"1em", flexWrap:"wrap"}}>
         
     {boxers.map(boxer => (<BoxerListItem key={boxer._id} {...boxer}></BoxerListItem>))  }
 

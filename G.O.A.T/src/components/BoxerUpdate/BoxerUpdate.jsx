@@ -1,36 +1,52 @@
-import { useNavigate } from "react-router-dom"
-import * as boxerService from "../../services/boxerService"
+import { useEffect } from "react"
+import { useState } from "react"
+import { useNavigate, useParams } from "react-router-dom"
+import * as boxerService from '../../services/boxerService'
 
-export default function CreateBoxer(){
+export default function BoxerUpdate(){
 
     const navigate = useNavigate()
+    const { boxerId } = useParams()
 
-    const createBoxerSubmitHandler = (e) =>{
+    const [ boxer, setBoxer ] = useState({})
+
+    useEffect(() =>{
+      boxerService.getOne()
+      .then(result => setBoxer(result))
+      .catch(err => setBoxer(err))
+    },[boxerId])
+
+
+
+    const updateBoxerHandler = async (e) =>{
 
         e.preventDefault()
-    
-        const boxerData = Object.fromEntries(new FormData(e.currentTarget))
-    
-       try {
-        boxerService.create(boxerData)
-        navigate('/boxers')
-        
-       } catch (error) {
-        console.log(error);
-       }
-    
+        const values = Object.fromEntries(new FormData(e.currentTarget))
+        try {
+            await boxerService.update(boxerId, values)
+            navigate('/boxers')
+        } catch (error) {
+            console.log(error);
         }
 
-    return(
-        <>
-        <body style={{backgroundImage:"url('/public/images/public1.jpg')",height:"50em",backgroundPosition: "center",backgroundSize: "cover"}}>
+
+    }
+
+  const  onChange = (e) => {
+
+    setBoxer(state => ({...state,[e.target.name]: e.target.value}))
+  }
+
+return (
+    <>
+            <body style={{backgroundImage:"url('/public/images/public1.jpg')",height:"50em",backgroundPosition: "center",backgroundSize: "cover"}}>
             
         
             <section id="create-page" style={{border:"3px solid black", background:"gray", textAlign:"center",width:"30%",height:"30em"}}>
-  <form id="create" onSubmit={createBoxerSubmitHandler}>
+  <form id="create" onSubmit={updateBoxerHandler}>
     <ul style={{textAlign:"right"}}>
     <div className="container">
-      <h1>Your vote</h1>
+      <h1 style={{color:"orange"}}>Edit</h1>
       <label htmlFor="leg-title">Name of the boxer:</label>
       <input
         type="text"
@@ -67,7 +83,7 @@ export default function CreateBoxer(){
       />
       <br />
       <br />
-      <input style={{border:"3px solid black"}} className="btn submit" type="submit" defaultValue="Create Boxer" />
+      <input style={{border:"3px solid black"}} className="btn submit" type="submit" defaultValue="Update Boxer" onChange={onChange}/>
     </div>
     </ul>
     <img style={{width:"100px"}}src="/public/images/logo-2.jpg" alt="pic" />
@@ -76,6 +92,7 @@ export default function CreateBoxer(){
  
 </section>
 </body>
-        </>
-    )
+    </>
+)
+
 }

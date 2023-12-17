@@ -24,7 +24,7 @@ const { isAuthenticated, username } = useContext(TodoContext)
           <a href="/boxers"><h2 style={{color:"orange", padding:"1em", marginRight:"-10em",marginTop:"0.7em"}}>List of the greatest</h2></a>
         
         </a>
-        {isAuthenticated && (<a href="/boxers/create"><h2  style={{color:"orange", marginLeft:"20em",marginTop:"-3em" }}>Your suggestion</h2></a>
+        {isAuthenticated && (<a href="/boxers/create"><h2  style={{color:"orange", marginLeft:"20em",marginTop:"-2.1em",width:"10em" }}>Your vote</h2></a>
 )}
         
       </div>
@@ -97,9 +97,9 @@ const { isAuthenticated, username } = useContext(TodoContext)
               <a
                 className="nav-link text-uppercase text-center w-100"
                 data-bs-toggle="pill"
-                href="#pills-2"
+                href="/boxers/info"
               >
-                Why Choose Us
+                Boxing History
               </a>
             </li>
           </ul>
@@ -135,7 +135,7 @@ const { isAuthenticated, username } = useContext(TodoContext)
   {/* Programe Start */}
   <div
     className="container-fluid programe position-relative px-5 mt-5"
-    style={{ marginBottom: 180 }}
+    style={{ marginBottom: "-5em" }}
   >
     
   </div>
@@ -166,19 +166,15 @@ const { isAuthenticated, username } = useContext(TodoContext)
           <div className="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
             <h4 className="text-uppercase text-light mb-4">Quick Links</h4>
             <div className="d-flex flex-column justify-content-start">
-              <a className="text-secondary mb-2" href="#">
+              <a className="text-secondary mb-2" href="/">
                 <i className="bi bi-arrow-right text-primary me-2" />
                 Home
               </a>
-              <a className="text-secondary mb-2" href="#">
+              <a className="text-secondary mb-2" href="/">
                 <i className="bi bi-arrow-right text-primary me-2" />
                 About Us
               </a>
-              <a className="text-secondary mb-2" href="#">
-                <i className="bi bi-arrow-right text-primary me-2" />
-                Class Schedule
-              </a>
-              <a className="text-secondary mb-2" href="#">
+              <a className="text-secondary mb-2" href="/boxers">
                 <i className="bi bi-arrow-right text-primary me-2" />
                 Our Boxers
               </a>
@@ -188,19 +184,15 @@ const { isAuthenticated, username } = useContext(TodoContext)
           <div className="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
             <h4 className="text-uppercase text-light mb-4">Popular Links</h4>
             <div className="d-flex flex-column justify-content-start">
-              <a className="text-secondary mb-2" href="#">
+              <a className="text-secondary mb-2" href="/">
                 <i className="bi bi-arrow-right text-primary me-2" />
                 Home
               </a>
-              <a className="text-secondary mb-2" href="#">
+              <a className="text-secondary mb-2" href="/">
                 <i className="bi bi-arrow-right text-primary me-2" />
                 About Us
               </a>
-              <a className="text-secondary mb-2" href="#">
-                <i className="bi bi-arrow-right text-primary me-2" />
-                Class Schedule
-              </a>
-              <a className="text-secondary mb-2" href="#">
+              <a className="text-secondary mb-2" href="/boxers">
                 <i className="bi bi-arrow-right text-primary me-2" />
                 Our Boxers
               </a>
