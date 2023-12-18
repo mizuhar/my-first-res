@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import * as boxerService from '../../services/boxerService'
 import { TodoContext } from '../contexts/TodoContext'
+import LikeButton from '../LikeButton/LikeButton'
 
 
 
@@ -62,6 +63,9 @@ export default function BoxerDetails(){
           <a href="/" className="card-link" style={{border:"1px solid black",padding:"0.5em"}}>
            Home
           </a>
+          <br />
+          <br />
+          <LikeButton></LikeButton>
         </div>
       </div>
       </body>
