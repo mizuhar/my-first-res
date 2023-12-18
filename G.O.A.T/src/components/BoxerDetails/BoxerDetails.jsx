@@ -43,7 +43,7 @@ export default function BoxerDetails(){
       
         <div className="card" style={{ width: "22rem", textAlign:"center", alignItems:"center",background:"grey"}}>
 
-        <img style={{height:"270px",padding:"1em"}} src={boxer.imageUrl} className="card-img-top" alt="pic" />
+        <img style={{height:"310px",width:"300px", padding:"1em"}} src={boxer.imageUrl} className="card-img-top" alt="pic" />
         <div className="card-body">
           <h5 className="card-title">Details</h5>
           <p className="card-text" style={{fontSize:"22px"}}>{boxer.name}</p>
@@ -53,14 +53,14 @@ export default function BoxerDetails(){
           <li style={{background:"gray"}} className="list-group-item">{boxer.category}</li>
         </ul>
         <div className="card-body">
-            {userId === boxer._ownerId && (<><a href={`/boxers/${boxerId}/update`} className="card-link" style={{border:"1px solid green",padding:"0.5em"}}>
+            {userId === boxer._ownerId && (<><a href={`/boxers/${boxerId}/update`} className="card-link" style={{border:"2px solid blue",padding:"0.5em"}}>
             Update
           </a>
-          <a href="#" className="card-link" style={{border:"1px solid red",padding:"0.5em"}} onClick={deleteClickHandler}>
+          <a href="#" className="card-link" style={{border:"2px solid red",padding:"0.5em"}} onClick={deleteClickHandler}>
            Delete
           </a></>)}
           
-          <a href="/" className="card-link" style={{border:"1px solid black",padding:"0.5em"}}>
+          <a href="/" className="card-link" style={{border:"2px solid black",padding:"0.5em"}}>
            Home
           </a>
           <br />

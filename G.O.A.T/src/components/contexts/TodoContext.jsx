@@ -43,7 +43,7 @@ const logoutHandler = ()=> {
     setAuth({})
 
     localStorage.removeItem('accessToken')
-
+   
     navigate("/")
 }
 

@@ -33,10 +33,10 @@ const { isAuthenticated, username } = useContext(TodoContext)
   {/* Header End */}
   {/* Hero Start */}
  
-  <div  className="container-fluid bg-primary p-5 bg-hero mb-5" style={{backgroundImage:"url(/public/images/ring.jpg)"}}>
+  <div  className="container-fluid bg-primary p-5 bg-hero mb-5" style={{backgroundImage:"url(public/images/ring.jpg)",height:"50em"}}>
     
     <div className="row py-5" >
-    <img style={{opacity: 0.33, width: "100em", height:"20em", marginTop:"-5em"}} src="#" alt="pic1" />
+    {/* <img style={{opacity: 0.33, width: "100em", height:"20em", marginTop:"-5em"}}  /> */}
       <div className="col-12 text-center">
         <h1 className="display-2 text-uppercase text-white mb-md-4">G.O.A.T</h1>
         {!isAuthenticated && (<><a href="/login" className="btn btn-primary py-md-3 px-md-5 me-3">
@@ -56,32 +56,35 @@ const { isAuthenticated, username } = useContext(TodoContext)
   </div>
   {/* Hero End */}
   {/* About Start */}
-  <div className="container-fluid p-5" style={{background:"grey"}}>
+  <div className="container-fluid p-5" style={{backgroundImage:"url(public/images/about.jpg)",opacity:"0.9",backgroundSize:"cover",marginTop:"-2.99em"}}>
     <div className="row gx-5">
       <div className="col-lg-5 mb-5 mb-lg-0" style={{ minHeight: 400 }}>
         <div className="position-relative h-100">
-          <img
-            className="position-absolute w-100 h-100 rounded"
-            src="/public/images/about.jpg"
+         
            
-          />
+ 
+           
+         
         </div>
       </div>
       <div className="col-lg-7">
         <div className="mb-4">
-          <h5 className="text-primary text-uppercase">About Us</h5>
+          
           <h1 className="display-3 text-uppercase mb-0">Welcome to G.O.A.T</h1>
         </div>
-        <h4 className="text-body mb-4">
-          Diam dolor diam ipsum tempor sit. Clita erat ipsum et lorem stet no
-          labore lorem sit clita duo justo magna dolore
-        </h4>
-        <p className="mb-4">
-          Nonumy erat diam duo labore clita. Sit magna ipsum dolor sed ea duo at
-          ut. Tempor sit lorem sit magna ipsum duo. Sit eos dolor ut sea rebum,
-          diam sea rebum lorem kasd ut ipsum dolor est ipsum. Et stet amet justo
-          amet clita erat, ipsum sed at ipsum eirmod labore lorem.
-        </p>
+       <br />
+       <br />
+       <br />
+       <br />
+       <br />
+       <br />
+       <br />
+       <br />
+       <br />
+       <br />
+       <br />
+
+       
         <div className="rounded bg-dark p-5">
           <ul className="nav nav-pills justify-content-between mb-3">
             <li className="nav-item w-50">
@@ -109,10 +112,7 @@ const { isAuthenticated, username } = useContext(TodoContext)
                 Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam
                 dolor diam ipsum et, tempor voluptua sit consetetur sit.
                 Aliquyam diam amet diam et eos sadipscing labore. Clita erat
-                ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
-                clita duo justo et tempor consetetur takimata eirmod, dolores
-                takimata consetetur invidunt magna dolores aliquyam dolores
-                dolore. Amet erat amet et magna
+                
               </p>
             </div>
             <div className="tab-pane fade" id="pills-2">
@@ -151,15 +151,15 @@ const { isAuthenticated, username } = useContext(TodoContext)
             <h4 className="text-uppercase text-light mb-4">Get In Touch</h4>
             <div className="d-flex mb-2">
               <i className="bi bi-geo-alt text-primary me-2" />
-              <p className="mb-0">123 Street, New York, USA</p>
+              <p className="mb-0">Roshtok 14 Street, Varna, Bulgaria</p>
             </div>
             <div className="d-flex mb-2">
               <i className="bi bi-envelope-open text-primary me-2" />
-              <p className="mb-0">info@example.com</p>
+              <p className="mb-0">mizuhar@abv.bg</p>
             </div>
             <div className="d-flex mb-2">
               <i className="bi bi-telephone text-primary me-2" />
-              <p className="mb-0">+012 345 67890</p>
+              <p className="mb-0">+359 899-990-291</p>
             </div>
           
           </div>
@@ -212,7 +212,7 @@ const { isAuthenticated, username } = useContext(TodoContext)
         <div className="py-lg-4 text-center">
           <p className="text-secondary mb-0">
             ©{" "}
-            <a className="text-light fw-bold" href="#">
+            <a className="text-light fw-bold" href="/">
               G.O.A.T
             </a>
             . All Rights Reserved.
@@ -223,7 +223,7 @@ const { isAuthenticated, username } = useContext(TodoContext)
         <div className="py-lg-4 text-center credit">
           <p className="text-light mb-0">
             Designed by{" "}
-            <a className="text-light fw-bold" href="#">
+            <a className="text-light fw-bold" href="/">
               Vladislav Stanchev
             </a>
           </p>
@@ -233,7 +233,7 @@ const { isAuthenticated, username } = useContext(TodoContext)
   </div>
   {/* Footer End */}
   {/* Back to Top */}
-  <a href="#" className="btn btn-dark py-3 fs-4 back-to-top">
+  <a href="/" className="btn btn-dark py-3 fs-4 back-to-top">
     <i className="bi bi-arrow-up" />
   </a>
 </>
